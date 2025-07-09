@@ -1,0 +1,253 @@
+
+
+   * {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+  }
+  
+  .container {
+    width: 460px;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .heading {
+    text-align: center;
+    color: #FF6B82;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .box {
+    border: 1.8px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    position: relative;
+    background: #fff;
+    cursor: pointer;
+  }
+  
+  .box.expanded {
+    border: 2px solid #FF6B82;
+    background: #FFF9FA;
+  }
+  
+  .box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+
+      
+  }
+  
+  .box-header input[type="radio"] {
+    margin-right: 0px;
+    margin: 0;
+  padding: 0;
+  }
+
+  .box-header input[type="radio"] + .box-title {
+    margin-left: 0;
+  }
+  
+  .box-title {
+    font-size: 14px;
+    font-weight: 600;
+    /* flex-grow: 1; */
+    display: inline-block;  /* Ensures it only takes text width */
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;   /* Prevents wrapping */
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  
+  }
+  
+  .tag {
+    background: #FF6B82;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  
+  .price {
+    text-align: right;
+  }
+  
+  .main-price {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .old-price {
+    font-size: 12px;
+    text-decoration: line-through;
+    color: #aaa;
+    opacity: 0.6;
+  }
+  
+  .popular-badge {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    background: #FF6B82;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 0 0 4px 4px;
+  }
+  
+  .dropdowns {
+    margin-top: 15px;
+    
+  }
+  
+  .dropdown-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .dropdown-row label {
+    font-size: 12px;
+    width: 72.3px;
+    height: 25.31px;
+  }
+  
+  .dropdown-row select {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+  }
+  
+  .bottom-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .free-delivery {
+    color: #FF6B82;
+    font-weight: 500;
+  }
+  
+  .total {
+    font-weight: 400;
+    color: #000;
+  }
+  
+  .cart-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #FF6B82;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .powered {
+    text-align: right;
+    font-size: 12px;
+    color: rgba(0,0,0,0.4);
+    margin-top: 10px;
+  }
+  @media (max-width: 400px) {
+    .box-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .price {
+      text-align: left;
+      margin-left: 0;
+    }
+  }
+  
+
+  .most-popular-tag::before,
+.most-popular-tag::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.most-popular-tag::before {
+  right: 100%;
+  border-width: 10px 10px 0 0;
+  border-color: #FF6B82 transparent transparent transparent;
+}
+
+.most-popular-tag::after {
+  left: 100%;
+  border-width: 10px 0 0 10px;
+  border-color: #FF6B82 transparent transparent transparent;
+}
+
+.custom-select {
+    position: relative;
+    /* display: inline-block; */
+    width: 100px;
+  }
+  
+  .custom-select select {
+    appearance: none;         /* remove native arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%; 
+    padding: 6px 24px 6px 8px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer; 
+  }
+  
+  /* Triangle Icon */
+  .custom-select::after {
+    content: '▼';  /* filled down triangle */
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* allows clicking through */
+    font-size: 12px;
+    color: #333;
+  }
+  

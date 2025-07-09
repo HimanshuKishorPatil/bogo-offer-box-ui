@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Offer Boxes</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="heading">YAY! It’s BOGO</h2>
+
+        <!-- Box 1 -->
+        <div class="box" data-price="10.00" onclick="selectBox(0)">
+            <div class="box-header">
+                <div style="display: block;">
+                    <input type="radio" name="offer" />
+                    <span class="box-title">1 Unit</span>
+                    <span class="tag">10% Off</span>
+                </div>
+                <div class="price">
+                    <div class="main-price">$10.00 USD</div>
+                    <div class="old-price">$24.00 USD</div>
+                </div>
+            </div>
+            <div class="dropdowns" style="display: none;">
+                <div class="dropdown-row" style="padding-left: 30%;">
+                    <div style="padding-right: 20%;">size</div>
+                    <div>color</div>
+                </div>
+                <div class="dropdown-row ">
+                    <label>#1</label>
+                    <div class="custom-select">
+                        <select>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                        </select>
+                    </div>
+                    <div class="custom-select">
+                        <select>
+                            <option>Black</option>
+                            <option>White</option>
+
+                        </select>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <!-- Box 2 (Most Popular) -->
+        <div class="box expanded most-popular" data-price="18.00" onclick="selectBox(1)">
+            <div class="popular-badge">MOST POPULAR</div>
+            <div class="box-header">
+                <div style="display: block;">
+                    <input type="radio" name="offer" checked />
+                    <span class="box-title">2 Unit</span>
+                    <span class="tag">20% Off</span>
+                </div>
+                <div class="price">
+                    <div class="main-price">$18.00 USD</div>
+                    <div class="old-price">$24.00 USD</div>
+                </div>
+            </div>
+            <div class="dropdowns" style="display: block;">
+                <div class="dropdown-row" style="padding-left: 30%;">
+                    <div style="padding-right: 20%;">size</div>
+                    <div>color</div>
+                </div>
+                <div class="dropdown-row ">
+                    <label>#1</label>
+                    <div class="custom-select">
+                        <select>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                        </select>
+                    </div>
+                    <div class="custom-select">
+                        <select>
+                            <option>Black</option>
+                            <option>White</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="dropdown-row ">
+                    <label>#2</label>
+                    <div class="custom-select">
+                        <select>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                        </select>
+                    </div>
+                    <div class="custom-select">
+                        <select>
+                            <option>Black</option>
+                            <option>White</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Box 3 -->
+        <div class="box " data-price="24.00" onclick="selectBox(2)">
+            <div class="box-header">
+                <div style="display: block;">
+                    <input type="radio" name="offer" />
+                    <span class="box-title">3 Unit</span>
+                    <span class="tag">30% Off</span>
+                </div>
+                <div class="price">
+                    <div class="main-price">$24.00 USD</div>
+                    <div class="old-price">$24.00 USD</div>
+                </div>
+            </div>
+            <div class="dropdowns" style="display: none;">
+                <div class="dropdown-row" style="padding-left: 30%;">
+                    <div style="padding-right: 20%;">size</div>
+                    <div>color</div>
+                </div>
+                <div class="dropdown-row ">
+                    <label>#1</label>
+                    <div class="custom-select">
+                        <select>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                        </select>
+                    </div>
+                    <div class="custom-select">
+                        <select>
+                            <option>Black</option>
+                            <option>White</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="dropdown-row ">
+                    <label>#2</label>
+                    <div class="custom-select">
+                        <select>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                        </select>
+                    </div>
+                    <div class="custom-select">
+                        <select>
+                            <option>Black</option>
+                            <option>White</option>
+
+                        </select>
+                    </div>
+
+                </div>
+                <div class="dropdown-row ">
+                    <label>#3</label>
+                    <div class="custom-select">
+                        <select>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                        </select>
+                    </div>
+                    <div class="custom-select">
+                        <select>
+                            <option>Black</option>
+                            <option>White</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Bottom Info -->
+        <div class="bottom-info">
+            <span class="free-delivery">Free Delivery</span>
+            <span class="total"></span>
+        </div>
+
+        <button class="cart-btn">+ Add to Cart</button>
+        <div class="powered">© Powered by Pumper</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
